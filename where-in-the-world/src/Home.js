@@ -20,7 +20,7 @@ function GetCountries() {
     return (
         <div className='main'>
             {countries.map(country => (
-                <div className='country' key={country.area}><p>{country.name.common}</p></div>
+                <div className='country' key={country.cca2}>{country.name.common}</div>
             ))}
         </div>
     )

@@ -1,11 +1,11 @@
 import React from 'react'
-import GetCountries from './GetCountries'
+import Home from './Home'
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
-      <GetCountries />
+      <h1>Where In The World</h1>
+      <Home />
     </div>
   )
 };
