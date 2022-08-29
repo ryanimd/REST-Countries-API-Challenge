@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function GetCountries() {
-    const [country, setCountry] = useState([]);
+    const [countries, setCountries] = useState([]);
 
     useEffect(() => {
         axios
@@ -10,16 +10,17 @@ function GetCountries() {
         .then(
         (response) => {
             console.log(response)
+            setCountries(response.data)
         },
         (error) => console.error(error)
         )
         .catch((error) => console.error(error))
-    })
+    }, [])
 
     return (
         <div className='main'>
-            {country.map(country => (
-                <div className='country' key={country.data.id}>{country.data.commonname}</div>
+            {countries.map(country => (
+                <div className='country' key={country.area}><p>{country.name.common}</p></div>
             ))}
         </div>
     )
