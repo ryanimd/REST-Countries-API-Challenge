@@ -1,0 +1,8 @@
+/* Light Mode */
+.country {
+    color:  hsl(200, 15%, 8%)
+}
+
+.country-name {
+    font-size: 14px;
+}
