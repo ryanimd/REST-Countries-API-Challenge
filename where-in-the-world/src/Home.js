@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import Card from 'react-bootstrap/Card'
 import axios from 'axios'
 import ShowCountryInfo from './ShowCountryInfo';
 
@@ -25,10 +26,19 @@ function GetCountries() {
                 // <BrowserRouter>
                 //     <Link style={{textDecoration:'none'}} to='/ShowCountryInfo'>
                         <div className='country' key={country.cca2}>
-                            <b className='country-name'>{country.name.common}</b>
-                            <p>Population: {country.population}</p>
-                            <p>Region: {country.region}</p>
-                            <p>Capital: {country.capital}</p>
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={country.flags.png} />
+                                <Card.Body>
+                                    <Card.Title className='country-name'>{country.name.common}</Card.Title>
+                                        <Card.Text>
+                                            <b>Population:</b> {country.population}
+                                            <br />
+                                            <b>Region:</b> {country.region}
+                                            <br />
+                                            <b>Capital:</b> {country.capital}
+                                        </Card.Text>
+                                </Card.Body>
+                            </Card>        
                         </div>
                 //     </Link>
                 //     <Routes>
