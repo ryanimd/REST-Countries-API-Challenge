@@ -1,12 +1,12 @@
 /* Light Mode */
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .country {
-    color:  hsl(200, 15%, 8%)
-}
-
-.country-name {
-    font-size: 14px;
-}
-
-p {
-    font-size: 12px;
+    margin: 25px;
+    border: 1px black solid;
+    border-radius: 5px;
+    color:  hsl(200, 15%, 8%);
 }
