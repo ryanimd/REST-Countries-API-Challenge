@@ -12,7 +12,7 @@ function Countries(props) {
                 <Link to={`/info/${country.cca2}`} element={<Country />} key={country.cca2}>
                     <div className='country' >
                         <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={country.flags.png} style={{ width: '18rem', borderRadius: '5px 5px 0 0' }} />
+                            <Card.Img variant="top" src={country.flags.png} style={{ width: '18rem', height: '10rem', borderRadius: '5px 5px 0 0' }} />
                             <Card.Body>
                                 <Card.Title><b>{country.name.common}</b></Card.Title>
                                     <Card.Text>

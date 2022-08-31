@@ -7,7 +7,7 @@ import Country from './routes/Country';
 import axios from 'axios'
 
 function App() {
-  const [countries, setCountries] = useState([]);
+    const [countries, setCountries] = useState([]);
 
     useEffect(() => {
         axios
@@ -22,6 +22,7 @@ function App() {
         .catch((error) => console.error(error))
     }, [])
 
+
   return (
     <div>
       <h1>Where In The World</h1>
@@ -30,7 +31,7 @@ function App() {
         <Route path='/info' element={<Country />}>
             <Route path=':countryId' element={<Country />} />
         </Route>
-      </Routes>
+      </Routes>     
     </div>
   )
 };
