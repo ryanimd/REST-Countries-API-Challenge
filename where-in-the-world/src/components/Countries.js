@@ -9,14 +9,14 @@ function Countries(props) {
     return (
         <div className='home'>
             {props.countries.map(country => (
-                <Link to={`/info/${country.cca2}`} element={<Country />} key={country.cca2}>
+                <Link to={`/info/${country.name.common}`} element={<Country />} key={country.cca2}>
                     <div className='country' >
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={country.flags.png} style={{ width: '18rem', height: '10rem', borderRadius: '5px 5px 0 0' }} />
                             <Card.Body>
                                 <Card.Title><b>{country.name.common}</b></Card.Title>
                                     <Card.Text>
-                                        <b>Population:</b> {country.population.toLocaleString("en-US")}
+                                        <b>Population:</b> {country.population.toLocaleString()}
                                         <br />
                                         <b>Region:</b> {country.region}
                                         <br />

@@ -28,9 +28,7 @@ function App() {
       <h1>Where In The World</h1>
       <Routes>
         <Route path='/' element={<Countries countries={countries} />} />
-        <Route path='/info/:name' element={<Country />}>
-            {/* <Route path=':countryId' element={<Country />} /> */}
-        </Route>
+        <Route path='/info/:name' element={<Country />}></Route>
       </Routes>     
     </div>
   )
