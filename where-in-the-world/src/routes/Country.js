@@ -5,12 +5,12 @@ import axios from 'axios'
 
 
 function Country() {
-    const params = useParams();
-    const [country, setCountry] = useState({});
+    const { name } = useParams();
+    const [country, setCountry] = useState([]);
 
     useEffect(() => {
         axios
-        .get(`https://restcountries.com/v3.1/name/${params.countryId}`)
+        .get(`https://restcountries.com/v3.1/name/${name}`)
         .then(
         (response) => {
             console.log(response.data)
@@ -20,12 +20,16 @@ function Country() {
         )
         .catch((error) => console.error(error));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[name])
 
     return (
-    <div>
-        <h1>{country.name.common}</h1>
-        {/* <img src={country.flags.png} alt={`Flag of ${country.name.common}`}/> */}
+    <div className='info'>
+         {country.map(c => (
+            <div>
+                <h1>{c.name.common}</h1>
+                <img src={c.flags.png} alt={`Flag of ${c.name.common}`}/>
+            </div>
+         ))}
     </div> 
   )
     }
