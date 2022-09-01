@@ -34,7 +34,10 @@ function Country() {
                 <p><b>Sub Region:</b> {c.subregion}</p>
                 <p><b>Capital:</b> {c.capital[0]}</p>
                 <p><b>Top Level Domain:</b> {c.tld[0]}</p>
-                <p><b>Currencies:</b>{c.currencies.name}</p>
+                {country.map(curr => 
+                    <p><b>Currencies:</b>{curr.currencies[name]}</p>
+                )}
+                
                 <p><b>Languages:</b> {c.language}</p>
             </div>
          ))}

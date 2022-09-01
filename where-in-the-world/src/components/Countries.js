@@ -3,13 +3,13 @@ import Card from 'react-bootstrap/Card';
 
 import { Link } from 'react-router-dom';
 
-import Country from '../routes/Country';
+import Country from './Country';
 
 function Countries(props) {
     return (
         <div className='home'>
             {props.countries.map(country => (
-                <Link to={`/info/${country.name.common}`} element={<Country />} key={country.cca2}>
+                <Link to={`/info/${country.name.common}`} element={<Country />} key={country.name.common}>
                     <div className='country' >
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={country.flags.png} style={{ width: '18rem', height: '10rem', borderRadius: '5px 5px 0 0' }} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Countries from './components/Countries';
-import Country from './routes/Country';
+import Country from './components/Country';
 
 import axios from 'axios'
 
