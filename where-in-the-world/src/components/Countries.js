@@ -9,7 +9,7 @@ function Countries(props) {
     return (
         <div className='home'>
             {props.countries.map(country => (
-                <Link to={`/info/${country.name.common}`} element={<Country />} key={country.name.common}>
+                <Link to={`/info/${country.name.common}`} element={<Country />} key={country.cca2}>
                     <div className='country' >
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={country.flags.png} style={{ width: '18rem', height: '10rem', borderRadius: '5px 5px 0 0' }} />
