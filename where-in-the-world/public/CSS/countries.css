@@ -1,0 +1,23 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: hsl(0, 0%, 98%);
+    
+}
+
+.country {
+    margin: 25px;
+    color:  hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 5px hsl(0, 0%, 52%);
+    border-radius: 5px;
+}
+
+b {
+    margin-left: 25px;
+}
+
+.countryInfoHome {
+    font-weight: 600;
+}

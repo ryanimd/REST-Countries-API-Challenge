@@ -1,16 +1,12 @@
-/* Light Mode */
+@import "countries.css";
+
 * {
     text-decoration: none;
+    font-family: Nunito Sans;
 }
 
-.home {
-    display: flex;
-    flex-wrap: wrap;
+header {
+    background-color: hsl(0, 0%, 100%);
+    margin-left: 50px;
 }
 
-.country {
-    margin: 25px;
-    border: 1px black solid;
-    border-radius: 5px;
-    color:  hsl(200, 15%, 8%);
-}

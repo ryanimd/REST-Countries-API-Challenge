@@ -6,6 +6,7 @@ import Country from './components/Country';
 
 import axios from 'axios'
 
+
 function App() {
     const [countries, setCountries] = useState([]);
 
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <div>
-      <h1>Where In The World</h1>
+      <header>
+        <h1>Where In The World?</h1>
+      </header>
       <Routes>
         <Route path='/' element={<Countries countries={countries} />} />
         <Route path='/info/:name' element={<Country />}></Route>

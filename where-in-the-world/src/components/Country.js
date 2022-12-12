@@ -24,7 +24,7 @@ function Country() {
 
     return (
         <div className='info'>
-            <button><Link to='/' style={{ textDecoration: 'none', color: 'black' }}>Back</Link></button>
+            <Link to='/' style={{ textDecoration: 'none', color: 'black' }}><button>Back</button></Link>
             {country.map(c => (
                 <div key={c.name.common}>
                     <h1>{c.name.common}</h1>
@@ -38,17 +38,21 @@ function Country() {
                     {country.map(curr => 
                         <p key={curr.name.common}><b>Currencies:</b> {Object.values(curr.currencies)[0].name}</p>
                     )}
-                    {country.map((lang) => 
+                    {country.map((lang => 
                         <p key={lang.name.common}><b>Languages:</b> {Object.values(lang.languages) + ','}</p>
-                    )}               
-                    {country.map((border) => 
-                        <button key={border.name.common}><a href={`info/${border.borders}`}> {Object.values(border.borders)} </a></button>
-                        )}    
+                    ))}   
+                    {/*Some countries borders could not be reached and was causing a bug that would cause the country info not to be shown*/}
+                    {/* {country.map((border, i) => 
+                    // This is the closest I've gotten to the button appearing and seeing the switch to a new page in the url
+                        <p><Link to={`/info/${border.borders[i]}`} key={i}><button>{Object.values(border.borders)[i]}</button></Link></p>
+                        )}     */}
                 </div>
                 ))}              
         </div> 
   )
     }
-  
+//   if (borders === cca3) {
+//      return country.name.common
+// }
 
 export default Country
