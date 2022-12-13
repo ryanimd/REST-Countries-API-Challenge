@@ -17,11 +17,11 @@ function Countries(props) {
                                 <br />
                                 <Card.Title><b>{country.name.common}</b></Card.Title>
                                     <Card.Text>
-                                        <b className='countryInfoHome'>Population:</b> {country.population.toLocaleString()}
+                                        <b className='country-info-home'>Population:</b> {country.population.toLocaleString()}
                                         <br />
-                                        <b className='countryInfoHome'>Region:</b> {country.region}
+                                        <b className='country-info-home'>Region:</b> {country.region}
                                         <br />
-                                        <b className='countryInfoHome'>Capital:</b> {country.capital}
+                                        <b className='country-info-home'>Capital:</b> {country.capital}
                                         <br />
                                         <br />
                                         <br />
